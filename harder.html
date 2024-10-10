@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harder, Better, Faster, Stronger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        /* Responsive grid layout */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 901px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Button styling */
+        button {
+            padding: 20px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn1 { background-color: #f54242; }
+        .btn2 { background-color: #42f554; }
+        .btn3 { background-color: #4249f5; }
+        .btn4 { background-color: #f5a742; }
+        .btn5 { background-color: #f542e9; }
+        .btn6 { background-color: #42f5f2; }
+        .btn7 { background-color: #f5f542; }
+        .btn8 { background-color: #9f42f5; }
+
+        button:hover {
+            opacity: 0.8;
+        }
+        h1 {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Harder, Better, Faster, Stronger</h1>
+    <div class="container">
+        <button class="btn1" onclick="playSound('work it')">work it</button>
+        <button class="btn2" onclick="playSound('make it')">make it</button>
+        <button class="btn3" onclick="playSound('do it')">do it</button>
+        <button class="btn4" onclick="playSound('makes us')">makes us</button>
+        <button class="btn5" onclick="playSound('harder')">harder</button>
+        <button class="btn6" onclick="playSound('better')">better</button>
+        <button class="btn7" onclick="playSound('faster')">faster</button>
+        <button class="btn8" onclick="playSound('stronger')">stronger</button>
+        <button class="btn1" onclick="playSound('more than')">more than</button>
+        <button class="btn2" onclick="playSound('hour')">hour</button>
+        <button class="btn3" onclick="playSound('our')">our</button>
+        <button class="btn4" onclick="playSound('never')">never</button>
+        <button class="btn5" onclick="playSound('ever')">ever</button>
+        <button class="btn6" onclick="playSound('after')">after</button>
+        <button class="btn7" onclick="playSound('work is')">work is</button>
+        <button class="btn8" onclick="playSound('over')">over</button>
+    </div>
+
+    <script>
+        function playSound(note) {
+            const audio = new Audio(`sounds/${note}.wav`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
